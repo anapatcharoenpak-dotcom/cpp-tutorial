@@ -1,23 +1,20 @@
 #include <iostream>
+#include <vector>
 
-namespace first{
-    int x = 1;
-}
+// e.g: typedef std::vector<std::pair<std::string, int>> pairlist_t; //VERY LONG DATATYPE -> create a nickname
+typedef std::string text_t; // or using text_t = std::string
 
-namespace second{
-    int x = 2;
-}
+int main (){
+    // typedef =    reserved keyword used to create an additional name
+    //              (alias) for another datatype.
+    //              New identifier for an existing type
+    //              helps with readability and reduces typos (like a nickname)
+    //              Use when there is a !!!clear benefit!!!
+    //              Replaced with 'using' (work better w/ templates)
 
-int main() {
-    // 4. Namespace
-    // Namespace =  providing the solution for preventing name conflicts
-    //              in large projects. Each entity needs a unique name.
-    //              A namespace allows for identically named entities
-    //              as long as the namespaces are different.
-
-    int x = 0;
-    std::cout << x << "\n";
-    std::cout << first::x << "\n";
-    std::cout << second::x << "\n";
+    // pairlist_t pairlist;
+    text_t firstName = "Anapat";
+    int age = 22;
+    std::cout << firstName << '\n' << age <<'\n';
     return 0;
 }
