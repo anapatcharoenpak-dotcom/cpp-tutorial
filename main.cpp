@@ -1,11 +1,23 @@
 #include <iostream>
 
+namespace first{
+    int x = 1;
+}
+
+namespace second{
+    int x = 2;
+}
+
 int main() {
-    // 3. Constant 
-    // The const keyword is used to declare a variable as constant, meaning its value cannot be changed after initialization.
-    // convention: upper-case declaration.
-    const int age = 22;
-    // age = 23; // This would cause a compilation error because age is a constant
-    std::cout << age;
+    // 4. Namespace
+    // Namespace =  providing the solution for preventing name conflicts
+    //              in large projects. Each entity needs a unique name.
+    //              A namespace allows for identically named entities
+    //              as long as the namespaces are different.
+
+    int x = 0;
+    std::cout << x << "\n";
+    std::cout << first::x << "\n";
+    std::cout << second::x << "\n";
     return 0;
 }
