@@ -1,20 +1,14 @@
 #include <iostream>
 #include <vector>
 
-// e.g: typedef std::vector<std::pair<std::string, int>> pairlist_t; //VERY LONG DATATYPE -> create a nickname
-typedef std::string text_t; // or using text_t = std::string
-
 int main (){
-    // typedef =    reserved keyword used to create an additional name
-    //              (alias) for another datatype.
-    //              New identifier for an existing type
-    //              helps with readability and reduces typos (like a nickname)
-    //              Use when there is a !!!clear benefit!!!
-    //              Replaced with 'using' (work better w/ templates)
-
-    // pairlist_t pairlist;
-    text_t firstName = "Anapat";
-    int age = 22;
-    std::cout << firstName << '\n' << age <<'\n';
+    int students = 20;
+    students += 1; // or students++ (for +1)
+    //students -= 1; // or students-- (for -1)
+    //students *= 2; (multiply by 2)
+    //students /=2; (divide by 2)
+    int remainder = students % 2;
+    std::cout << students << '\n';
+    std::cout << remainder;
     return 0;
 }
