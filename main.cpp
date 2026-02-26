@@ -2,15 +2,30 @@
 #include <cmath>
 
 int main(){
-    // 10. Exercise 1: Calculating Hypothenus of right triangle.
-    double a, b;
-    std::cout << "Enter one side of right triangle a: ";
-    std::cin >> a;
+    // 11. If statement - easy (already learnt)
+    // 12. Switch statement - easy (already learnt)
+    // 13. calculator
+    // 14. ternary operator: condition ? expression1 (true) : expression 2 (false); 
+    // 15. logical operator:
+    // && (and), || (or), ! (negation)
+    // 16. (exercise 2): temperature conversion.
+    char grade;
+    std::cout << "Enter your grade (A-B): ";
+    std::cin >> grade;
 
-    std::cout << "Enter one side of right triangle b: ";
-    std::cin >> b;
+    switch(grade){
+        case 'A':
+            std::cout << "Excellent!";
+            break;
+        case 'B':
+            std::cout << "Great!";
+            break;
+        default:
+            std::cout << "Invalid letter grade!";
+            break;
+    }
 
-    double c = sqrt(pow(a, 2) + pow (b, 2));
-    std::cout << "Hypothenus is " << c;
-    return 0;
+    int number = 9;
+    number % 2 == 1 ? std::cout << "odd" : std::cout << "even";
+
 }
