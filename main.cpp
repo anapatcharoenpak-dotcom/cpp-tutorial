@@ -9,23 +9,16 @@ int main(){
     // 15. logical operator:
     // && (and), || (or), ! (negation)
     // 16. (exercise 2): temperature conversion.
-    char grade;
-    std::cout << "Enter your grade (A-B): ";
-    std::cin >> grade;
+    // 17. Useful String Method - at, append, insert, find
 
-    switch(grade){
-        case 'A':
-            std::cout << "Excellent!";
-            break;
-        case 'B':
-            std::cout << "Great!";
-            break;
-        default:
-            std::cout << "Invalid letter grade!";
-            break;
-    }
+    std::string name;
 
-    int number = 9;
-    number % 2 == 1 ? std::cout << "odd" : std::cout << "even";
+    std::cout << "Enter your name: ";
+    std::getline(std::cin, name);
+    
+    std::cout << name.append("@gmail.com");
 
+    std::cout << "Your username is now: " << name;
+    
+    return 0;
 }
