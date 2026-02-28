@@ -5,15 +5,12 @@ int main(){
     // 23. RNG: by default, random in C++ is pseudo-random (not truly random) - if we want better random, we require #include <random>
 
     srand(time(NULL));
-    
-    int num1 = (rand() % 20) + 1;
+    int num = (rand() + 1) % 20;
 
-    std::cout << num1 << '\n';
-    
-    if (num1 >= 13){
-        std::cout << "You defeated demogorgon";
+    if(num >= 13){
+        std::cout << "You defeated demogorgon with roll " << num;
     } else {
-        std::cout << "You were taken by demogorgon";
+        std::cout << "You rolled " << num << " - demogorgon takes you to upside down! ";
     }
     return 0;
     
