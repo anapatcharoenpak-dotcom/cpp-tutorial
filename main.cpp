@@ -2,23 +2,20 @@
 #include <cmath>
 
 int main(){
-    // 20. for loop
+    // 23. RNG: by default, random in C++ is pseudo-random (not truly random) - if we want better random, we require #include <random>
+
+    srand(time(NULL));
     
-    for(int i = 1; i <= 20; i+=1){
+    int num1 = (rand() % 20) + 1;
 
-        if(i == 13){
-            continue;
-        }
-        std::cout << i << '\n';
-
+    std::cout << num1 << '\n';
+    
+    if (num1 >= 13){
+        std::cout << "You defeated demogorgon";
+    } else {
+        std::cout << "You were taken by demogorgon";
     }
-
-    std::cout << "Yay";
-
-
-    // 21. break and continue
-    // break = break out of a loop
-    // continue = skip current iteration
+    return 0;
     
     
 }
